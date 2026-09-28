@@ -37,3 +37,4 @@ Bundle-ClassPath: .,
  lib/jackson-core.jar,
  lib/jackson-databind.jar,
  lib/jna.jar
+Bundle-RequiredExecutionEnvironment: JavaSE-21

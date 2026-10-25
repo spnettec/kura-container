@@ -11,22 +11,16 @@
     Contributors:
      YOFC
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>org.eclipse.kura</groupId>
         <artifactId>kura-container.parent</artifactId>
         <version>3.0.0-SNAPSHOT</version>
         <relativePath>../bundles/pom.xml</relativePath>
     </parent>
-
     <artifactId>kura-container.distrib</artifactId>
     <packaging>pom</packaging>
-
     <dependencies>
         <dependency>
             <groupId>org.eclipse.kura</groupId>
@@ -39,13 +33,10 @@
             <version>${project.version}</version>
         </dependency>
     </dependencies>
-
     <properties>
         <addon.installation.dir>/opt/eclipse/kura/siblings/container/4s</addon.installation.dir>
-
         <jar.container.provider.name>org.eclipse.kura.container.provider-${project.version}.jar</jar.container.provider.name>
         <jar.container.orchestration.provider.name>org.eclipse.kura.container.orchestration.provider-${project.version}.jar</jar.container.orchestration.provider.name>
-
         <deb.architecture>all</deb.architecture>
         <package.name>kura-container</package.name>
         <kura.repo.distribution>kura-6</kura.repo.distribution>
@@ -53,7 +44,6 @@
         <summary>YOFC SMART IOT EDGE GATEWAY - Kura Container orchestration addon</summary>
         <long.description>The YOFC SMART IOT EDGE GATEWAY Kura Container addon provides the docker-java based OSGi container orchestration service and the configurable container instance service.</long.description>
     </properties>
-
     <profiles>
         <profile>
             <id>debugBuild</id>
@@ -107,7 +97,6 @@
             </build>
         </profile>
     </profiles>
-
     <build>
         <plugins>
             <plugin>
@@ -124,13 +113,12 @@
                             <name>release.version</name>
                             <value>${project.version}</value>
                             <regex>-SNAPSHOT</regex>
-                            <replacement></replacement>
+                            <replacement />
                             <failIfNoMatch>false</failIfNoMatch>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-
             <plugin>
                 <groupId>io.github.git-commit-id</groupId>
                 <artifactId>git-commit-id-maven-plugin</artifactId>
@@ -153,7 +141,6 @@
                     </includeOnlyProperties>
                 </configuration>
             </plugin>
-
             <plugin>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
@@ -172,7 +159,6 @@
                     </execution>
                 </executions>
             </plugin>
-
             <plugin>
                 <groupId>org.vafer</groupId>
                 <artifactId>jdeb</artifactId>
@@ -245,3 +231,4 @@
         </plugins>
     </build>
 </project>
+
